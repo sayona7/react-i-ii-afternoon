@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 
-class Card extends Component {
+class Buttons extends Component {
+
     render() {
+
         return (
-            <div>Card</div>
+            <div>Buttons</div>
         )
     }
-
 }
-
-export default Card;
