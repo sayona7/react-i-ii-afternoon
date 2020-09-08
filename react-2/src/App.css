@@ -38,5 +38,36 @@
       align-items: center; 
      }
   
-
+    .users {
+      margin-left: 100px;
+    }
+  
+    .counter {
+      margin-left: 625px;
+      margin-bottom: 420px;
+    }
+  
+    .allButtons {
+    margin-top: 10px ;
+    display: flex;
+    flex-direction: row;
+    }
+  
+    .derp {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+    }
+  
+    .noClick {
+     padding: 10px;
+      border-radius: 30%;
+      background-color: skyblue;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      border: black;
+    }
+  
     
