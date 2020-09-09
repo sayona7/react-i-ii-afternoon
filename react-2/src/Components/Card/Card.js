@@ -23,7 +23,7 @@ class Card extends Component {
                     </ol>
                 </section>
             </div>
-            <div className="current-card">{`${index} / ${count}`}</div>
+            <div className="current-card">{`${person.id} / ${count}`}</div>
         </div>
 
         )

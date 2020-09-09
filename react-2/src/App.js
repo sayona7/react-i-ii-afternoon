@@ -18,7 +18,7 @@ class App extends Component {
 
     if (this.state.view === 0) {
         this.setState({
-            view: this.state.data.length - 1
+            view: this.state.users.length - 1
         });
       } else {
         this.setState({
@@ -29,7 +29,7 @@ class App extends Component {
 
   nextPage = () => {
     
-    if (this.state.view === this.state.data.length - 1) {
+    if (this.state.view === this.state.users.length - 1) {
           this.setState({
               view: 0
           });
@@ -42,8 +42,7 @@ class App extends Component {
   }
 
   render() {
-    const {users, view} = this.state;
-    const curUser = users[view - 1];
+    const {users} = this.state;
 
     return (
       <div className='app-div' >
@@ -53,7 +52,7 @@ class App extends Component {
         </div>
 
         <div className='body'>
-            <Card person={this.state.users[this.state.view]} count={users.length} index={view} />
+            <Card person={this.state.users[this.state.view]} count={users.length} />
 
             <Buttons previous={this.previousPage} next={this.nextPage} />
         </div>
