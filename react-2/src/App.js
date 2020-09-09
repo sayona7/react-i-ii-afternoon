@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Card from "./Components/Card/Card";
 import data from "./data";
+import Buttons from "./Components/Buttons/Buttons";
 
 class App extends Component {
   constructor() {
@@ -9,37 +10,35 @@ class App extends Component {
 
     this.state = {
       users: data,
-      view: 1
+      view: 0
     }
   }
 
   previousPage = () => {
-    let view = this.state.view
-    if (view === 1) {
-      let lastUser = this.state.users.length
-      this.setState({
-        view: lastUser
-      })
-    }
-    else {
-      this.setState({
-        view: view - 1
-      })
-    }
+
+    if (this.state.view === 0) {
+        this.setState({
+            view: this.state.data.length - 1
+        });
+      } else {
+        this.setState({
+            view: this.state.view - 1
+        });
+      }
   }
 
   nextPage = () => {
-    let view = this.state.view
-    const lastUser = this.state.users.length
-    if (view === lastUser) {
-      this.setState({
-        view: 1
-      })
-    } else {
-      this.setState({
-        view: view + 1
-      })
-    }
+    
+    if (this.state.view === this.state.data.length - 1) {
+          this.setState({
+              view: 0
+          });
+      } else {
+          this.setState({
+              view: this.state.view + 1
+          });
+      }
+    
   }
 
   render() {
@@ -54,10 +53,9 @@ class App extends Component {
         </div>
 
         <div className='body'>
-          <div className='card'>
-            <Card person={curUser} count={users.length} index={view} />
-          </div>
+            <Card person={this.state.users[this.state.view]} count={users.length} index={view} />
 
+            <Buttons previous={this.previousPage} next={this.nextPage} />
         </div>
 
       </div>

@@ -28,46 +28,53 @@
       justify-content: center;
       align-items: center;
     }
-  
+
     .card {
-      height: 450px;
-      width: 80vw;
-      background-color: lightgray;
-      display: flex;
-      flex-direction: row;
-      align-items: center; 
-     }
-  
-    .users {
-      margin-left: 100px;
+        display: flex;
+        background-color: lightgray;
+        justify-content: space-between;
+        align-items: top;
+        width: 90vh;
+        height: 50vh;
+        padding: 40px;
+        margin: 0;
     }
-  
-    .counter {
-      margin-left: 625px;
-      margin-bottom: 420px;
+    
+    .current-card {
+        font-weight: bold;
+        font-size: 25px;
     }
-  
-    .allButtons {
-    margin-top: 10px ;
-    display: flex;
-    flex-direction: row;
+    
+    h1 {
+        text-decoration: underline;
+        text-decoration-color: rgb(0, 153, 255);
+        line-height: 1.5em;
+        margin: 10px 0;
+        font-size: 1.5em;
     }
-  
-    .derp {
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-      width: 300px;
+    
+    .card-fields {
+        margin: 15px 0;
+        line-height: 1.25em;
+        font-size: 1em;
     }
-  
-    .noClick {
-     padding: 10px;
-      border-radius: 30%;
-      background-color: skyblue;
-      font-size: 15px;
-      font-weight: bold;
-      color: white;
-      border: black;
+    
+    .card-field {
+        font-weight: bold;
     }
-  
+    
+    p {
+        margin: 5px;
+    }
+
+    ol {
+        margin-left: 30px;
+    }
+
+    .card-button {
+        background-color: black;
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
     

@@ -6,28 +6,25 @@ class Card extends Component {
 
         return (
 
-             <div className='card'>
-
-                <div className='users'>
-                    <h1>{person.name.first} {person.name.last}</h1>
-                    <h4>From: {person.city}, {person.country}</h4>
-                    <h4>Job Title: {person.title}</h4>
-                    <h4>Employer: {person.employer}</h4>
-
-                    <h4>Favorite Movies:
-                    <ul>
+            <div className="card">
+            <div className="card-contents">
+                <h1>{`${person.name.first} ${person.name.last}`}</h1>
+                <section className="card-fields">
+                    <p><span className="card-field">From: </span>{`${person.city}, ${person.country}`}</p>
+                    <p><span className="card-field">Job Title: </span>{person.title}</p>
+                    <p><span className="card-field">Employer: </span>{person.employer}</p>
+                </section>
+                <section className="card-fields">
+                    <p><span className="card-field">Favorite Movies:</span></p>
+                    <ol>
                         <li>{person.favoriteMovies[0]}</li>
                         <li>{person.favoriteMovies[1]}</li>
                         <li>{person.favoriteMovies[2]}</li>
-                        </ul>
-                    </h4>
-                </div>
-
-                <div className='counter'>
-                    <h1>{index}/{count}</h1>
-                </div>
-
+                    </ol>
+                </section>
             </div>
+            <div className="current-card">{`${index} / ${count}`}</div>
+        </div>
 
         )
     }
